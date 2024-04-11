@@ -58,7 +58,13 @@ public class Polynomial {
 
 	
 	public Polynomial derivative() {
-		return null;//FIXME
+		Polynomial polynomial2 = new Polynomial();
+		int N = list.size() - 1;
+		for (int i = 0; i < list.size() - 1; i++) {
+			polynomial2 += N * list.get(i);
+			N--;
+			}
+		return polynomial2;
 	}
 	
 
